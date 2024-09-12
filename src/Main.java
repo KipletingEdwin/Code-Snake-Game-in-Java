@@ -10,6 +10,7 @@ public class Main {
 
         JFrame frame = new JFrame("Snake Game");
         frame.setVisible(true);
+        frame.setSize(boardWidth,boardHeight);
 
     }
 }
