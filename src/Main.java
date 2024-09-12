@@ -12,6 +12,7 @@ public class Main {
         frame.setVisible(true);
         frame.setSize(boardWidth,boardHeight);
         frame.setLocationRelativeTo(null);
+        frame.setResizable(false);
 
     }
 }
