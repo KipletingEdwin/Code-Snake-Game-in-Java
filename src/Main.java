@@ -9,6 +9,7 @@ public class Main {
         int boardHeight = boardWidth;
 
         JFrame frame = new JFrame("Snake Game");
+        frame.setVisible(true);
 
     }
 }
