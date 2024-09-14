@@ -61,5 +61,10 @@ public class SnakeGame extends JPanel {
         g.fillRect(snakeHead.x * tileSize, snakeHead.y * tileSize,tileSize,tileSize);
     }
 
+    public  void  placeFood(){
+        food.x = random.nextInt(boardWidth/tileSize); //600/25 = 24
+        food.y = random.nextInt(boardHeight/tileSize);
+    }
+
 
 }
