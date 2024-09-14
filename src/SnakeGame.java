@@ -1,8 +1,15 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Random;
 
-public class SnakeGame extends JPanel {
+public class SnakeGame extends JPanel implements ActionListener {
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+    }
 
     private  class Tile{
         int x;
@@ -26,6 +33,9 @@ public class SnakeGame extends JPanel {
     Tile food;
     Random random;
 
+    //game loop
+    Timer gameLoop;
+
     SnakeGame(int boardWidth, int boardHeight) {
         this.boardWidth = boardWidth;
         this.boardHeight = boardHeight;
@@ -37,6 +47,8 @@ public class SnakeGame extends JPanel {
         food = new Tile(10,10);
         random = new Random();
         placeFood();
+
+        gameLoop = new Timer(100, this);
     }
 
     public  void  paintComponent(Graphics g){
