@@ -27,6 +27,9 @@ public class SnakeGame extends JPanel {
         setBackground(Color.black);
 
         snakeHead = new Tile(5,5);
+    }
+
+    public  void  paintComponent(){
 
     }
 
