@@ -18,7 +18,11 @@ public class SnakeGame extends JPanel {
     int boardHeight;
     int tileSize = 25;
 
+    //Snake
     Tile snakeHead;
+
+    //Food
+    Tile food;
 
     SnakeGame(int boardWidth, int boardHeight) {
         this.boardWidth = boardWidth;
@@ -26,11 +30,9 @@ public class SnakeGame extends JPanel {
         setPreferredSize(new Dimension(this.boardWidth, this.boardHeight));
         setBackground(Color.black);
 
-        //Snake
         snakeHead = new Tile(5,5);
 
-        //Food
-        Tile food;
+        food = new Tile(10,10);
     }
 
     public  void  paintComponent(Graphics g){
