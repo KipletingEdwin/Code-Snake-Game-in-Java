@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.Random;
 
 public class SnakeGame extends JPanel {
 
@@ -23,6 +24,7 @@ public class SnakeGame extends JPanel {
 
     //Food
     Tile food;
+    Random random;
 
     SnakeGame(int boardWidth, int boardHeight) {
         this.boardWidth = boardWidth;
@@ -33,6 +35,8 @@ public class SnakeGame extends JPanel {
         snakeHead = new Tile(5,5);
 
         food = new Tile(10,10);
+        random = new Random();
+        placeFood();
     }
 
     public  void  paintComponent(Graphics g){
