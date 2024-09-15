@@ -6,11 +6,7 @@ import java.util.Random;
 
 public class SnakeGame extends JPanel implements ActionListener {
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        repaint();
 
-    }
 
     private  class Tile{
         int x;
@@ -51,6 +47,9 @@ public class SnakeGame extends JPanel implements ActionListener {
         random = new Random();
         placeFood();
 
+        velocityX = 0;
+        velocityY = 0;
+
         gameLoop = new Timer(100, this);
         gameLoop.start();
     }
@@ -80,6 +79,19 @@ public class SnakeGame extends JPanel implements ActionListener {
     public  void  placeFood(){
         food.x = random.nextInt(boardWidth/tileSize); //600/25 = 24
         food.y = random.nextInt(boardHeight/tileSize);
+    }
+
+
+    public  void  move(){
+
+    }
+
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        move();
+        repaint();
+
     }
 
 
