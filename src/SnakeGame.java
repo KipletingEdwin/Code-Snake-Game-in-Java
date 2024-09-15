@@ -72,6 +72,7 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
         setFocusable(true);
 
         snakeHead = new Tile(5,5);
+        snakeBody = new ArrayList<Tile>();
 
         food = new Tile(10,10);
         random = new Random();
