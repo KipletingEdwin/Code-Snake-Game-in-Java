@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class SnakeGame extends JPanel implements ActionListener, KeyListener {
@@ -51,6 +52,7 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
 
     //Snake
     Tile snakeHead;
+    ArrayList<Tile> snakeBody;
 
     //Food
     Tile food;
