@@ -2,11 +2,26 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.Random;
 
-public class SnakeGame extends JPanel implements ActionListener {
+public class SnakeGame extends JPanel implements ActionListener, KeyListener {
 
+    @Override
+    public void keyPressed(KeyEvent e) {
 
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+
+    }
 
     private  class Tile{
         int x;
@@ -15,7 +30,6 @@ public class SnakeGame extends JPanel implements ActionListener {
         Tile(int x, int y){
             this.x = x;
             this.y = y;
-
         }
     }
 
@@ -83,7 +97,9 @@ public class SnakeGame extends JPanel implements ActionListener {
 
 
     public  void  move(){
-
+        //Snake Head
+        snakeHead.x =+ velocityX;
+        snakeHead.y =+ velocityY;
     }
 
 
@@ -93,6 +109,5 @@ public class SnakeGame extends JPanel implements ActionListener {
         repaint();
 
     }
-
 
 }
