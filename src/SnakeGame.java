@@ -63,6 +63,7 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
         this.boardHeight = boardHeight;
         setPreferredSize(new Dimension(this.boardWidth, this.boardHeight));
         setBackground(Color.black);
+        addKeyListener(this);
 
         snakeHead = new Tile(5,5);
 
