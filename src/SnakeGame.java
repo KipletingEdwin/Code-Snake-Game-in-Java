@@ -157,7 +157,9 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
             if (collision(snakeHead,snakePart)){
                 gameOver = true;
             }
-
+        }
+        if(snakeHead.x * tileSize < 0 || snakeHead.x * tileSize > boardHeight || snakeHead.y * tileSize < 0 || snakeHead.y * tileSize > boardHeight){
+            gameOver = true;
         }
 
 
