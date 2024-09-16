@@ -127,14 +127,20 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
 
     public  void  move(){
         //eat food
-        if(collision(snakeHead, food){
+        if(collision(snakeHead, food)){
             snakeBody.add(new Tile(food.x, food.y));
             placeFood();
+            //Snake Head
+        }
+        //Snake Body
+        for(int i = snakeBody.size()-1; i >= 0; i--){
+            Tile snakePart = snakeBody.get(i);
         }
 
-        //Snake Head
-        snakeHead.x =+ velocityX;
-        snakeHead.y =+ velocityY;
+        snakeHead.x += velocityX;
+        snakeHead.y += velocityY;
+
+
     }
 
 
