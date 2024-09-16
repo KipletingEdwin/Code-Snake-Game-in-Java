@@ -81,7 +81,7 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
         velocityX = 0;
         velocityY = 0;
 
-        gameLoop = new Timer(100, this);
+        gameLoop = new Timer(500, this);
         gameLoop.start();
     }
 
@@ -135,6 +135,15 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
         //Snake Body
         for(int i = snakeBody.size()-1; i >= 0; i--){
             Tile snakePart = snakeBody.get(i);
+            if(i == 0){
+                snakePart.x = snakeHead.x;
+                snakePart.y = snakeHead.y;
+            }
+            else {
+                Tile prevSnakePart = snakeBody.get(i-1);
+                snakePart.x = prevSnakePart.x;
+                snakePart.y = prevSnakePart.y;
+            }
         }
 
         snakeHead.x += velocityX;
